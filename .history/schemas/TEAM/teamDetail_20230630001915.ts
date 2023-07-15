@@ -1,0 +1,65 @@
+import {defineField, defineType} from 'sanity'
+
+export default defineType({
+  name: 'teamdetail',
+  title: 'TEAM DETAILS',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'name',
+      title: 'Name',
+      description: "Give a name for the team member",
+      type: 'string',
+    }),
+    defineField({
+      name: 'phone',
+      title: 'Phone',
+      description: 'Give a phone number',
+      type: 'string',
+    }),
+    defineField({
+      name: 'email',
+      title: 'Email',
+      description: 'Give an Email',
+      type: 'string',
+    }),
+    defineField({
+      name: 'location',
+      title: 'Location',
+      description: 'Give a location',
+      type: 'string',
+    }),
+    defineField({
+      name: 'specialization',
+      title: 'Specialization',
+      description: 'Give a specialization',
+      type: 'string',
+    }),
+    defineField({
+      name: 'bio',
+      title: 'Bio',
+      description: 'Give your bio',
+      type: 'string',
+    }),
+    defineField({
+      name: 'socials',
+      title: 'Social Media',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'socialmedia'}}],
+    }), 
+    defineField({
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      media: 'image',
+    },
+  },
+})

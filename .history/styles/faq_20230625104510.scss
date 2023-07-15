@@ -1,0 +1,14 @@
+@import './partials/variables.scss';
+
+.faq-area  {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    background: var(--clr-theme-3);
+    .container {
+        .row {
+            .col-lg-6 {
+
+            }
+        }
+    }
+}

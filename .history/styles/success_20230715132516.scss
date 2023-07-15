@@ -1,0 +1,13 @@
+@import './partials/breakpoints.scss';
+@import './partials/variables.scss';
+
+
+.container-info {
+    display: flex;
+    // background-color: yellow;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}

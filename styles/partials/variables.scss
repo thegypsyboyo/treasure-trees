@@ -1,0 +1,35 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+    // fonts
+    --main-font: 'Poppins';
+    --font-title: 'Archivo';
+
+
+    // --font-main: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    // --font-alt: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+
+  
+    // colors
+    --color-orange: #FBB03B;
+    --color-orange-light: #FFF3DF;
+    --color-black: #333333;
+    --color-text: #868686;
+    --color-white: #FFFFFF;
+    --color-gray: #706c61;
+    --color-red: #FF0000;
+    --clr-common-white: #fff;
+    --clr-common-black: #000;
+    --clr-common-blue: #2785ff;
+    --clr-common-heading: #0b3d2c;
+    --clr-common-text: #777;
+    --clr-common-border: #0b3d2c;
+    --clr-common-placeholder: #777;
+    --clr-theme-1: #0b3d2c;
+    --clr-theme-2: #2a7d2e;
+    --clr-theme-3: #f8f5f0;
+    --clr-bg-gray: #f3f4f6;
+    --clr-bg-black: #000;
+    --clr-bg-footer: #f6f6f6;
+  }

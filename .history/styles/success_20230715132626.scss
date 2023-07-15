@@ -1,0 +1,27 @@
+@import './partials/breakpoints.scss';
+@import './partials/variables.scss';
+
+
+.container-info {
+    display: flex;
+    background-color: yellow;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    @media (min-width: 576px) {
+        max-width: 520px;
+      }
+      @media (min-width: 768px) {
+        max-width: 720px;
+      }
+      @media (min-width: 992px) {
+        max-width: 960px;
+      }
+      @media (min-width: 1200px) {
+        max-width: 1140px;
+      }
+ 
+
+}

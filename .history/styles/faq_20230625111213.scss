@@ -1,0 +1,76 @@
+@import './partials/variables.scss';
+
+.faq-area  {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    background: var(--clr-theme-3);
+    .container {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+
+            .col-lg-6 {
+                max-width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-top: 0;
+                .faq-img {
+                    position: relative;
+                    max-width: 580px;
+                    background-color: yellow;
+                    img {
+                        width: 580px;
+                        height: 100%;
+                        max-height: 580px;
+                        border-radius: 100%;
+                        object-fit: cover;
+                        @media (max-width: 992px) {
+                          height: 400px;
+                          width: 400px;  
+                        }
+                    }
+                }
+                .section-title {
+                    position: relative;
+                    z-index: 2;
+                    .section-subtitle {
+                        margin-bottom: 12px;
+                        font-size: 16px;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        color: var(--clr-theme-2);
+                        display: block;
+                        margin-bottom: 10px;
+                        margin-top: -2px;
+                        line-height: 1;
+                    }
+                }
+            }
+            @media (min-width: 992px) {
+                .col-lg-6 {
+                    flex: 0 0 auto;
+                    width: 50%;
+                }
+            }
+        }
+        @media (min-width: 576px){
+            max-width: 540px;
+        }
+        @media (min-width: 768px){
+            max-width: 720px;
+        }
+        @media (min-width: 992px){
+            max-width: 960px;
+        }
+        @media (min-width: 1200px){
+            max-width: 1140px;
+        }
+        @media (min-width: 1400px){
+            max-width: 1320px;
+        }
+    }
+}

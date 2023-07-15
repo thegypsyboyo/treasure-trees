@@ -1,0 +1,43 @@
+@import './partials/breakpoints.scss';
+@import './partials/variables.scss';
+
+
+.container-info {
+    display: flex;
+    background-color: yellow;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+
+    .card {
+        background: white;
+        padding: 60px;
+        border-radius: 4px;
+        box-shadow: 0 2px 3px #C8D0D8;
+        display: inline-block;
+        margin: 0 auto;
+        .shape {
+            border-radius: 200px;
+            height: 200px;
+            width: 200px;
+            background: #F8FAF5;
+        }
+    }
+
+    @media (min-width: 576px) {
+        max-width: 520px;
+      }
+      @media (min-width: 768px) {
+        max-width: 720px;
+      }
+      @media (min-width: 992px) {
+        max-width: 960px;
+      }
+      @media (min-width: 1200px) {
+        max-width: 1140px;
+      }
+ 
+
+}

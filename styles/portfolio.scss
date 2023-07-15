@@ -1,0 +1,296 @@
+
+a , button{
+    color: inherit;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.portfolio-area  {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+
+    .container {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        .porfolio-wrapper {
+           .portfolio-tab {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 50px;
+
+                nav {
+                    .nav-tabs {
+                        border-bottom: 0;
+                        border: 1px solid var(--clr-theme-1);
+                        border-radius: 10px;
+                        display: flex;
+                        gap: 8px 18px;
+                        padding: 15px 23px;
+                        position: relative;
+                        background: var(--clr-common-white);
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            width: calc(100% - 36px);
+                            height: 100%;
+                            border: 1px solid var(--clr-theme-1);
+                            border-radius: 10px;
+                            left: 18px;
+                            bottom: -12px;
+                            z-index: -1;
+                        }
+                        @media only screen and (min-width: 576px)and (max-width:767px) {
+                            gap:8px 7px;
+                            padding: 15px 10px
+                            
+                        }
+                        
+                        @media(max-width: 575px) {
+                            gap:8px 13px;
+                            padding: 15px 10px
+                            
+                        }
+                        
+                        @media(max-width: 450px) {
+                            padding:15px
+                            
+                        }
+                                                
+                        .nav-link {
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: var(--clr-theme-1);
+                            text-transform: uppercase;
+                            border: 0;
+                            border-radius: 0;
+                            margin-bottom: 0;
+                            padding: 0 0 0 10px;
+                            position: relative;
+                        }
+
+                        .item-active {
+                            background: transparent;
+                            color: var(--clr-theme-2);
+                            position: relative;
+                            &:before {
+                                position: absolute;
+                                content: "";
+                                width: 6px;
+                                height: 6px;
+                                background: var(--clr-theme-2);
+                                border-radius: 50%;
+                                left: 0;
+                                top: 0;
+                                bottom: 0;
+                                margin: auto 0;
+                            }
+                        }
+                    }
+                }
+           } 
+           .portfolio-tab-content {
+                .tab-content {
+                   .tab-pane {
+                        
+                        .portfolio-hover-items-wrapper{
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 30px; 
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                           margin-top: 0;
+                           padding-top: 0;
+                           
+                                                                                  
+                            .portfolio-hover-style {
+                                position: relative;
+                                z-index: 5;
+                                overflow: hidden;
+                                border-radius: 10px; 
+                                .portfolio-thumb {
+                                    // height: 400px;
+                                    
+                                    height: fit-content;
+                                    height: auto;
+                               
+                                    height: 240px;
+                                    // max-height: 450px;
+                                    position: relative;
+                                    a {
+                                        outline: none;
+                                        border: none;
+                                        background: transparent; 
+                                        text-decoration: none;
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }                           
+                                    }
+                                    .portfolio-content {
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        // height: auto;
+                                        // max-height: 450px;
+                                        // height: inherit;
+                                        top: 0;
+                                        left: 0;
+                                        z-index: 2;
+                                        text-align: center;
+                                        padding: 0 70px;
+                                        transform: scale(.8);
+                                        border-radius: 10px;
+                                        overflow: hidden;
+                                        display: flex;
+                                        align-items: center;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: .3s;
+                                        justify-content: center;
+                                        
+                                        @media only screen and (min-width: 1200px)and (max-width:1399px) {                                            padding:0 50px
+                                            
+                                        }
+
+                                        @media (max-width: 450px),only screen and (min-width:768px)and (max-width:991px),only screen and (min-width:992px)and (max-width:1199px) {
+                                           
+                                            padding:0 30px
+                                            
+                                        }                                        
+                                        .portfolio-hover-bg {
+                                            position: absolute;
+                                            content: "";
+                                            width: 100%;
+                                            height: 100%;
+                                            background: var(--clr-theme-1);
+                                            opacity: .9;
+                                            z-index: -1;
+                                            top: 0;
+                                            left: 0;
+                                        } 
+                                        .portfolio-inner {
+                                            .portfolio-tag {
+                                                font-size: 14px;
+                                                font-weight: 700;
+                                                color: var(--clr-common-white);
+                                                text-transform: uppercase;
+                                            }
+                                            .portfolio-title {
+                                                margin-top: 10px;
+                                                margin-bottom: 35px;
+                                                line-height: 1.3;
+                                                font-size: 24px;
+                                                text-transform: uppercase;
+                                                color: var(--clr-common-white);
+                                                font-weight: 700;
+                                                @media only screen and (min-width: 1200px)and (max-width:1399px) {
+                                                    
+                                                    margin-bottom:25px;
+                                                    font-size: 22px
+                                                    
+                                                }
+                                                
+                                                @media (max-width: 575px),only screen and (min-width:576px)and (max-width:767px),only screen and (min-width:768px)and (max-width:991px),only screen and (min-width:992px)and (max-width:1199px) {
+                                                  
+                                                    margin-bottom:25px;
+                                                    font-size: 20px
+                                                    
+                                                }                                                
+
+                                            }
+                                            .icon-btn {
+                                                width: 60px;
+                                                height: 60px;
+                                                line-height: 60px;
+                                                font-size: 20px;
+                                                display: inline-block;
+                                                background: var(--clr-common-white);
+                                                color: var(--clr-theme-1);
+                                                text-align: center;
+                                                border-radius: 50%;
+                                                position: relative;
+
+
+                                                svg {
+                                                    position: absolute;
+                                                    top: 50%;
+                                                    left: 50%;
+                                                    transform: translate(-50%,-50%);                    
+                                                   
+
+                                                }  
+                                                &:hover {
+                                                    color: var(--clr-common-white);
+                                                    background: var(--clr-theme-2);
+                                                    transition: .2s ease-in;
+                                                    svg {
+                                                        transition: .3s ease-in;
+                                                    }
+                                                } 
+                                                @media (max-width: 450px),only screen and (min-width:768px)and (max-width:991px),only screen and (min-width:992px)and (max-width:1199px) {
+                                                    width:45px;
+                                                    height: 45px;
+                                                    line-height: 45px;
+                                                    font-size: 18px
+                                                    
+                                                }
+                                                                                                 
+                                            }
+                                        }                       
+                                    }                                    
+                                }
+                                :hover {
+                                    .portfolio-content {
+                                        opacity: 1;
+                                        visibility: visible;
+                                        transform: scale(1)
+                                    }
+                                }                              
+                            }                                                       
+                        }
+                        .portfolio-hover-items-wrapper>div {
+                       
+                            width: calc((100% - 60px)/3);
+                                                                               
+                                                  
+                            @media only screen and (min-width: 768px)and (max-width:991px) {
+                               
+                                width:calc((100% - 30px)/2)
+                                
+                            }
+                            
+                            @media (max-width: 575px),only screen and (min-width:576px)and (max-width:767px) {
+                               
+                                width:calc((100% - 0px)/1)
+                                
+                            }
+                          
+                        }
+
+                   } 
+                }
+           }
+        }
+
+        @media (min-width: 576px){
+            max-width: 540px;
+        }
+        @media (min-width: 768px){
+            max-width: 720px;
+        }
+        @media (min-width: 992px){
+            max-width: 960px;
+        }
+        @media (min-width: 1200px){
+            max-width: 1140px;
+        }
+        @media (min-width: 1400px){
+            max-width: 1320px;
+        }
+    }
+}

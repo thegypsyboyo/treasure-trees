@@ -1,0 +1,190 @@
+@import './partials/variables.scss';
+
+.faq-area  {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    background: var(--clr-theme-3);
+    .container {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+
+            .col-lg-6 {
+                // max-width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin: auto;
+                .section-title {
+                    position: relative;
+                    z-index: 2;
+                    .section-subtitle {
+                        margin-bottom: 12px;
+                        font-size: 16px;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        color: var(--clr-theme-2);
+                        display: block;
+                        margin-bottom: 10px;
+                        margin-top: -2px;
+                        line-height: 1;
+                    }
+                    .section-main-title {
+                        margin-bottom: 55px;
+                        font-size: 60px;
+                        line-height: 1.16;
+                        font-weight: 700;
+                        color: var(--clr-common-heading);
+                        text-transform: uppercase;
+                        letter-spacing: -1.3px;
+                        @media only screen and (min-width: 1400px)and (max-width:1600px) {
+                                font-size:56px
+                        }
+                        
+                        @media only screen and (min-width: 1200px)and (max-width:1399px) {
+                                font-size:50px
+                        }
+                        
+                        @media only screen and (min-width: 992px)and (max-width:1199px) {
+                                font-size:40px
+                        }
+                        
+                        @media only screen and (min-width: 768px)and (max-width:991px) {
+                                font-size:48px
+                        }
+                        
+                        @media only screen and (min-width: 576px)and (max-width:767px) {
+                                font-size:40px
+                        }
+                        
+                        @media(max-width: 575px) {
+                                font-size:40px
+                        }
+                    }
+                    @media (max-width: 992px) {
+                        margin-top: 15px;   
+                    }
+                }
+                .faq-wrapper {
+                    .gm-faq-2coluumn {
+                        .accordion {
+                            display: flex;
+                            flex-wrap: wrap;
+                            -moz-column-gap: 50px;
+                            column-gap: 50px;
+                            row-gap: 20px;
+                            .gm-faq-group {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 20px;  
+                                .accordion-item  {
+                                    // color: #000;
+                                    overflow: hidden;
+                                    // background-color: #fff;
+                                    // border: 1px solid #dee2e6;
+                                    .accordion-header{
+                                        margin-bottom: 0;
+                                        width: 100%;
+                                        .accordion-btn{
+                                            padding: 0 20px;
+                                            border-radius: 10px;
+                                            border: 2px solid var(--clr-theme-1);
+                                            height: 100px;
+                                            font-size: 18px;
+                                            font-weight: 700;
+                                            color: var(--clr-theme-1);
+                                            text-transform: uppercase;
+                                            font-family: Poppins,sans-serif;
+                                            // padding: 0 8px 0 28px;
+                                            justify-content: space-between;
+                                            // box-shadow: 0 16px 32px 0 rgba(0,0,0,.08);
+                                            text-align: left;
+                                            background: var(--clr-common-white);  
+                                            width: 100%;  
+                                            position: relative;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            gap: 60px;
+                                            align-items: center;
+                                            width: 100%;  
+                                            
+                                            .plus {
+                                                // background-image: none;
+                                                // font-weight: 400;
+                                                height: 40px;
+                                                // width: 40px;
+                                                // overflow: hidden;
+                                                border: 2px solid var(--clr-theme-1);
+                                                line-height: 36px;
+                                                border-radius: 50%;
+                                                // margin-left: 0;
+                                                // text-align: center;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                svg {
+                                                    font-size: 18px;
+
+                                                }                                   
+                                            }                                                                         
+                                        }
+
+                                    }
+                                    .accordion-collapse {
+                                        .accordion-body {
+                                            font-size: 18px;
+                                            line-height: 28px;
+                                            padding: 24px 9px 5px 30px;                                    
+                                        }
+                                    }
+                                    .accordion-close {
+                                        display: none;
+                                        transition: all .4s ease-in;
+                                        
+                                    }
+
+                                    &:first-of-type {
+                                        border-top-left-radius: 0.75rem;
+                                        border-top-right-radius: 0.75rem
+                                    }
+                                }                          
+                            }
+                        }
+                        .accordion>div {
+                            width: calc((100% - 50px)/2);
+
+                            @media (max-width: 575px),only screen and (min-width:576px)and (max-width:767px),only screen and (min-width:768px)and (max-width:991px) {
+                                width:calc((100% - 0px)/1)
+                                
+                            }                            
+                        }
+                    }
+                }
+            }
+            @media (min-width: 992px) {
+                .col-lg-6 {
+                    flex: 0 0 auto;
+                    width: 100%;
+                }
+            }
+        }
+        @media (min-width: 576px){
+            max-width: 540px;
+        }
+        @media (min-width: 768px){
+            max-width: 720px;
+        }
+        @media (min-width: 992px){
+            max-width: 960px;
+        }
+        @media (min-width: 1200px){
+            max-width: 1140px;
+        }
+        @media (min-width: 1400px){
+            max-width: 1320px;
+        }
+    }
+}

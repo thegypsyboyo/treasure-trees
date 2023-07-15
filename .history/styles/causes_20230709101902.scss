@@ -1,0 +1,494 @@
+a , button{
+    color: inherit;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+.content-area {
+    padding-top: 100px;
+    // padding-bottom: 60px;
+    .container {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        // background-color: yellow;
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            // background-color: #86b85e;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            .col-lg-12 {
+                width: 100%;
+                h3 {
+                    font-size: 30px;
+                    text-transform: uppercase;
+                    color: var(--clr-theme-1);
+                    font-weight: 700;
+                    margin-bottom:20px;
+                    @media (min-width: 576px){
+                        font-size: 35px;
+                    }
+                    @media (min-width: 768px){
+                        font-size: 40px;
+                    }
+                    @media (min-width: 992px) {
+                        font-size: 50px;
+                    }
+
+
+                }
+                p {
+                    font-size: 16px;
+                    color: var(--color-text);
+                    font-weight: 400;
+                }
+            }
+            @media (min-width: 992px) {
+                .col-lg-12 {
+                    flex: 0 0 auto;
+                    width: 70%;
+                }
+            }
+        }
+        @media (min-width: 576px){
+            max-width: 540px;
+        }
+        @media (min-width: 768px){
+            max-width: 720px;
+        }
+        @media (min-width: 992px){
+            max-width: 960px;
+        }
+        @media (min-width: 1200px){
+            max-width: 1140px;
+        }
+
+    }
+}
+.portfolio-area{
+    padding-top: 120px;
+    padding-bottom: 60px;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+
+    .container {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        .porfolio-wrapper {
+           .row-title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                .col-lg-7 {
+                    .section-title {
+                        position: relative;
+                        z-index: 1;
+                        margin-bottom: 55px;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        .overlay-title {
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: -44px;
+                            font-size: 160px;
+                            font-weight: 700;
+                            color: #f8f8f8;
+                            line-height: .8;
+                            z-index: -1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        .sub-title {
+                            font-size: 16px;
+                            font-weight: 700;
+                            display: block;
+                            line-height: 1;
+                            margin-bottom: 4px;
+                            color: #009e74;
+                        }
+                        .title {
+                            font-size: 60px;
+                            letter-spacing: -3px;
+                            margin-bottom: 0;
+                            line-height: 1.2;
+                            color: #001d23;
+                            margin-top: 0px;
+                            font-style: normal;
+                            font-weight: 700;
+                            @media only screen and (min-width: 1400px)and (max-width:1600px) {
+                                font-size:56px
+                        }
+                        
+                        @media only screen and (min-width: 1200px)and (max-width:1399px) {
+                                font-size:50px
+                        }
+                        
+                        @media only screen and (min-width: 992px)and (max-width:1199px) {
+                                font-size:40px
+                        }
+                        
+                        @media only screen and (min-width: 768px)and (max-width:991px) {
+                                font-size:48px
+                        }
+                        
+                        @media only screen and (min-width: 576px)and (max-width:767px) {
+                                font-size:40px
+                        }
+                        
+                        @media(max-width: 575px) {
+                                font-size:40px
+                        }
+                        }
+
+                    }
+                    @media (min-width: 992px) {
+                        flex: 0 0 auto;
+                        width: 66.66666667%;
+                    }
+                    @media (min-width: 1200px) {
+                      flex: 0 0 auto;
+                      width: 50%;
+                    }
+                }
+           } 
+           .portfolio-tab-content {
+                .tab-content {
+                   .tab-pane {
+                        
+                        .portfolio-hover-items-wrapper{
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 30px; 
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                           margin-top: 0;
+                           padding-top: 0;
+                           
+                                                                                  
+                            .portfolio-hover-style {
+                                position: relative;
+                                z-index: 5;
+                                overflow: hidden;
+                                border-radius: 0px; 
+
+                                .portfolio-thumb {
+                                    position: relative;
+                                    background: transparent;
+                                    display: block;
+                                    position: relative;
+                                    width: 100%;
+                                    transition: all 0.7s ease-in-out;
+                                    border-bottom: 5px solid transparent;
+                                    // padding-top: 0;  
+                                    .img-thumb {
+                                        position: relative;
+                                        z-index: 1;
+                                        overflow: hidden;
+                                        border-radius: 0!important;
+                                        height: 100%;
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }                       
+                                        .prgress-wrapper {
+                                            background-color: #5fb35b;
+                                            width: 100px;
+                                            text-align: center;
+                                            color: #fff;
+                                            padding: 15px;
+                                            border-radius: 50px 50px 0 0;
+                                            display: inline-block;
+                                            position: absolute;
+                                            left: 40px;
+                                            bottom: 0; 
+                                            .progress-circle {
+                                                width: 70px;
+                                                height: 70px;
+                                                line-height: 70px;
+                                                background: none;
+                                                box-shadow: none;
+                                                position: relative;
+                                                margin: 0 auto 10px; 
+                                                .progress-left {
+                                                    left: 1px;
+                                                    width: 50%;
+                                                    height: 100%;
+                                                    overflow: hidden;
+                                                    position: absolute;
+                                                    top: 0;
+                                                    z-index: 1;                                        
+                                                    .progress-bar {
+                                                        left: 100%;
+                                                        border-top-right-radius: 35px;
+                                                        border-bottom-right-radius: 35px;
+                                                        border-left: 0;
+                                                        -webkit-transform-origin: center left;
+                                                        transform-origin: center left;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        background: none;
+                                                        position: absolute;
+                                                        top: 0;
+                                                        border: 6px solid #fff;
+                                                        justify-content: center;
+                                                        color: #fff;
+                                                        text-align: center;
+                                                        white-space: nowrap;                                                                                                            
+                                                    }
+                                                }
+                                                
+                                                .progress-right {
+                                                    right: 1px;
+                                                    width: 50%;
+                                                    height: 100%;
+                                                    overflow: hidden;
+                                                    position: absolute;
+                                                    top: 0;
+                                                    z-index: 1;    
+                                                    // position: absolute;
+                                                 
+                                                }
+                                                &:after {
+                                                    content: "";
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    border-radius: 50%;
+                                                    border: 2px solid;
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    // -webkit-transform: scale(.93);
+                                                    // transform: scale(.93);
+                                                    // border-color: #5fb35b;                                               
+                                                }
+                                                
+
+                                            } 
+                                            // .progress-circle>span {
+                                            //     width: 50%;
+                                            //     height: 100%;
+                                            //     overflow: hidden;
+                                            //     position: absolute;
+                                            //     top: 0;
+                                            //     z-index: 1;                    
+                                            // }                                                                                      
+                                        }
+
+                                    }
+                                    .portfolio-content {
+                                        border: 2px solid #eee;
+                                        border-top: 0;
+                                        border-top-color: #eee;
+                                        margin-top: 0; 
+                                        overflow: hidden; 
+                                        box-shadow: 0 10px 20px 0 rgba(0,0,0,.04);
+                                        background-color: var(--clr-common-white); 
+                                        padding: 33px 20px 38px; 
+                                        height: 100%;
+
+                                                      
+                                        span.portfolio-tag {
+                                            display: inline-flex;
+                                            font-weight: 400;
+                                            font-size: 22px;
+                                            margin-bottom: 5px;
+                                            letter-spacing: -1px;
+                                            text-transform: uppercase;
+                                            line-height: 1.4;
+                                            color: var(--clr-theme-1); 
+
+                                        }
+                                        .portfolio-title {
+                                            font-size: 16px;
+                                            font-weight: 400;
+                                            letter-spacing: -1px;
+                                            color: var(--color-text);
+                                            font-size: 16px;
+                                            text-transform: lowercase;
+                                        }
+                                        .diation-details {
+                                            margin-top: 20px;
+                                            width: 100%; 
+                                            // background-color: yellow;
+                                            .progressbar-container {
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                                width: 100%;
+                                                flex-direction: column;
+                                                // background-color: darkkhaki; 
+                                                .progressbar-content {
+                                                    display: inline-flex;
+                                                    flex-direction: row;
+                                                    justify-content: space-between;
+                                                    font-size: 16px;
+                                                    margin: 0;
+                                                    font-weight: 600; 
+                                                    align-items: center;
+                                                    width: 100%;  
+                                                    position: relative; 
+                                                    span:nth-child(1) {
+                                                        color: var(--clr-theme-1);
+                                                        font-size: 16px;
+                                                        font-weight: 400;
+                                                        
+                                                    }                                                                    
+                                                    span:nth-child(2) {
+                                                        color: #86b85e;
+                                                        // background-color: darkgoldenrod;
+                                                    }                                                                    
+                                                }   
+                                                .progressbar-nav {
+                                                    width: 100%;
+                                                    position: relative;
+                                                    height: 8px;
+                                                    display: block;
+                                                    background-color: #294145;
+                                                    margin-bottom: 10px;
+                                                    .inner {
+                                                        // position: absolute;
+                                                        // left: 0;
+                                                        border-start-end-radius:30px;
+                                                        border-end-end-radius:30px;
+                                                        // width: 60%;
+                                                        height: 100%;
+                                                        // background-color: #86b85e;
+                                                        stroke-linecap: round;
+                                                        stroke-dasharray: 100, 100;
+                                                        stroke-dashoffset: 42.96;
+                                                    }
+                                                }
+                                                .give-goal {
+                                                    display: flex;
+                                                    flex-wrap: wrap;
+                                                    justify-content: space-between;
+                                                    margin-top: 20px;
+                                                    .raised {
+                                                        display: inline;
+                                                        width: fit-content;
+                                                        font-size: 14px;
+                                                        text-transform: lowercase;
+                                                        font-weight: 400;
+                                                        color: var(--clr-theme-1);
+                                                    }
+                                                    .donate-btn {
+                                                        line-height: 1;
+                                                        background: none;
+                                                        border-radius: 0;
+                                                        padding: 0 0 6px;
+                                                        text-transform: uppercase;
+                                                        color: #86b85e;
+                                                        width: fit-content;
+                                                        margin: 0;
+                                                        position: relative;
+                                                        transition: all .4s;
+                                                        &:hover {
+                                                            color: var(--clr-theme-1);
+                                                        }
+                                                        &:before {
+                                                            content: '';
+                                                            display: block;
+                                                            position: absolute;
+                                                            left: 0;
+                                                            bottom: -2px;
+                                                            height: 2px;
+                                                            width: 100%;
+                                                            // transition: transform .4s cubic-bezier(.33,.52,.05,.96);
+                                                            // transform: scaleX(0);
+                                                            // transform-origin: left;
+                                                            background-color: #86b85e;
+                                                        } 
+                                                        &:after {
+                                                            content: '';
+                                                            display: block;
+                                                            position: absolute;
+                                                            left: 0;
+                                                            bottom: -2px;
+                                                            height: 2px;
+                                                            width: 100%;
+                                                            background: currentColor;
+                                                            // transition: transform .4s cubic-bezier(.33,.52,.05,.96) .4s;
+                                                            // transform: scaleX(1);
+                                                            // transform-origin: right;                                                            
+                                                        }                                                       
+                                                    }
+                                                }
+
+                                            }
+                                        }
+
+
+                                    }
+                                    &:hover {
+                                        // transform: translateY(-6px);
+                                        .img-thumb {
+                                            overflow: hidden;
+                                            img {
+                                                // transform: scale(1.1);
+                                                transition: all .7s ease;
+                                                filter: grayscale(100%);
+                                                -webkit-filter: grayscale(100%);
+                                            }
+                                        }
+                                    }
+
+
+                                }
+                                // :hover {
+                                //     .portfolio-content {
+                                //         opacity: 1;
+                                //         visibility: visible;
+                                //         transform: scale(1)
+                                //     }
+                                // }                              
+                            }                                                       
+                        }
+                        .portfolio-hover-items-wrapper>div {
+                       
+                            width: calc((100% - 60px)/3);
+                                                                               
+                                                  
+                            @media only screen and (min-width: 768px)and (max-width:991px) {
+                               
+                                width:calc((100% - 30px)/2)
+                                
+                            }
+                            
+                            @media (max-width: 575px),only screen and (min-width:576px)and (max-width:767px) {
+                               
+                                width:calc((100% - 0px)/1)
+                                
+                            }
+                          
+                        }
+
+                   } 
+                }
+           }
+        }
+
+        @media (min-width: 576px){
+            max-width: 540px;
+        }
+        @media (min-width: 768px){
+            max-width: 720px;
+        }
+        @media (min-width: 992px){
+            max-width: 960px;
+        }
+        @media (min-width: 1200px){
+            max-width: 1140px;
+        }
+        @media (min-width: 1400px){
+            max-width: 1320px;
+        }
+    }
+}

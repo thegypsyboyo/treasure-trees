@@ -1,0 +1,87 @@
+@import './partials/breakpoints.scss';
+@import './partials/variables.scss';
+
+
+.container-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+
+    .card {
+        background: white;
+        padding: 60px;
+        border-radius: 4px;
+        box-shadow: 0 2px 3px #C8D0D8;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 auto;
+
+        .shape {
+            border-radius: 200px;
+            height: 200px;
+            width: 200px;
+            background: #F8FAF5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .checkmark {
+                color: #9ABC66;
+                font-size: 100px;
+                line-height: 200px;
+                margin-left:-15px;
+            }
+        }
+        p {
+            font-size: 18px;
+            max-width: 500px;
+            text-align: center;
+            span {
+                color: #009e74;
+                font-weight: 700;
+            }
+        }
+
+        .button-name {
+            // height: 60px;
+            width: fit-content;
+            background-color: var(--clr-theme-2);
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            border-radius: 0;
+            border: 0;
+            outline: none;
+            box-shadow: none;
+            margin-top: 25px;
+            transition: all .5s ease;
+            background-color: #009e74;
+            padding: 22px 40px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            &:hover {
+                background-color: #001d23;
+                color: #fff;
+            }
+        }
+    }
+
+    @media (min-width: 576px) {
+        max-width: 520px;
+      }
+      @media (min-width: 768px) {
+        max-width: 720px;
+      }
+      @media (min-width: 992px) {
+        max-width: 960px;
+      }
+      @media (min-width: 1200px) {
+        max-width: 1140px;
+      }
+ 
+
+}
