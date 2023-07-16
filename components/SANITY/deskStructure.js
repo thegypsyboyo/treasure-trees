@@ -23,8 +23,8 @@ export const myStructure = (S) =>
               .title('HOME ABOUT'),              
             S.documentTypeListItem("workFlow")
               .title('HOW WE WORK'),              
-            S.documentTypeListItem("ourFeatures")
-              .title('OUR FEATURES'),                          
+            // S.documentTypeListItem("ourFeatures")
+            //   .title('OUR FEATURES'),                          
             S.documentTypeListItem("countUp")
               .title('OUR PROGRESS'),              
           ])

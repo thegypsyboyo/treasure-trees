@@ -3,7 +3,6 @@ import "../../styles/about.scss"
 import dynamic from "next/dynamic";
 
 import PageIntro from "@/components/HOME/pageIntro/pageIntro";
-import SliderPage from "@/components/HOME/pageIntro/sliderPage";
 // const PageIntro = dynamic(() => import("../../components/HOME/pageIntro/pageIntro"))
 const Foundation = dynamic(() => import("../../components/HOME/foundation/foundation"))
 const Features = dynamic(() => import("../../components/HOME/features/features"))
@@ -18,24 +17,24 @@ export const metadata = {
   title: 'Home | | Explore our home page and see what we are about',
   description: 'Treasure trees, the eco restoration drive ',
 }
-import Home from "@/components/HOME/pageIntro/sliderPage";
-import Dashboard from "@/components/HOME/pageIntro/sliderPage";
-const page = ({response}:any) => {
+const page = () => {
 
   return (
     <>
+    <div>
+
         <PageIntro/>
-        <Dashboard response={response}/>
         <Foundation/>
         <ServiceInfo/>
         <Process/>
-        <AboutVideo/>
-        <Features/>
+        {/* <AboutVideo/> */}
+        {/* <Features/> */}
         <Milestones/>
         <PhotoGallery/>
         {/* <Team/> */}
         {/* <NewsLetter/> */}
         <Blog/>
+    </div>
     </>
   )
 }

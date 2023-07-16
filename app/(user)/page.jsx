@@ -28,7 +28,7 @@ const page = () => {
         <ServiceInfo/>
         <Process/>
         {/* <AboutVideo/> */}
-        <Features/>
+        {/* <Features/> */}
         <Milestones/>
         <PhotoGallery/>
         {/* <Team/> */}
