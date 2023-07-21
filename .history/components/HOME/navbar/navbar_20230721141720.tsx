@@ -51,11 +51,6 @@ const menuItems = [
       path: '/services',
     },
     {
-      id: 33,
-      label: 'Blog',
-      path: '/blog',
-    },
-    {
       id: 6,
       label: 'Pages',
       path: '#',
@@ -488,6 +483,12 @@ const Navbar = () => {
                             {menuItems.map((item) => renderMenuItem((item)))}
                         </ul>
                     </nav>
+                    {/* <div className="offset-search mb-[30px]">
+                        <form action="#" className="filter-search-input">
+                            <input type="text" placeholder="Search keyword" />
+                            <button type="submit"><FaSearch/></button>
+                        </form>
+                    </div> */}
                     <div className="offset-support mb-[30px]">
                         <div className="footer-support">
                             <div className="item-support-meta">

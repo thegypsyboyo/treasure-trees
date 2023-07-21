@@ -2,6 +2,7 @@
 @import './partials/variables.scss';
 // @import 'node_modules/react-modal-video/scss/modal-video.scss';
 
+
 .service-area {
     padding-top: 120px;
     padding-bottom: 90px;
@@ -37,18 +38,17 @@
                             overflow: hidden;
                             transition: .3s;
                             z-index: 5;
-                            background: var(--clr-common-white);
+                            background-color: var(--clr-theme-2);
                             margin-bottom: 30px;
-                            // height: 90%;
                             @media only screen and (max-width: 576px) {
-                               width: 90%;
-                               margin-left: auto;
-                               margin-right: auto;
-            
+                                width: 90%;
+                                margin-left: auto;
+                                margin-right: auto;
+                                
                             }
-    
+                            
                             &:hover {
-                                background-color: var(--clr-theme-2);
+                                background: var(--clr-common-white);
                                 transition: all .5s ease-in;
     
                                 .service-icon {
@@ -180,7 +180,6 @@
                                    
                                 }
                             }
-                    
                      }
 
                     @media only screen and (max-width: 576px) and (min-width: 576px) {

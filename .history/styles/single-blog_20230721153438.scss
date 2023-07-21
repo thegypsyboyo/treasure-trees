@@ -197,7 +197,7 @@
                                 line-height: auto;
                                 padding-bottom: 15px;
                                 margin-bottom: 0;
-                                @media (max-width: 768px){
+                                @media (min-width: 768px){
                                     font-size:15px;
                                 }
                             }
@@ -212,7 +212,7 @@
                                 line-height: 1.2;
                                 transition: all .3s ease-out 0s;
                                 letter-spacing: -1px;
-                                @media (max-width: 768px){
+                                @media (min-width: 768px){
                                     font-size:16px ;
                                 }
                             }
@@ -650,9 +650,16 @@
                             border-radius: 0 10px 10px 0;
                             i {
                                 -webkit-font-smoothing: antialiased;
+                                // display: inline-block;
+                                // font-style: normal;
+                                // font-feature-settings: normal;
+                                // font-variant: normal;
+                                // text-rendering: auto;
+                                // line-height: 1;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
+
                                 svg {
                                     display: flex;
                                     align-items: center;
