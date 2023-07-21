@@ -102,9 +102,10 @@ a , button{
                             top: -15px;
                             left: 50px;
                             @media (max-width: 720px) {
-                                position: absolute;
-                                left: 20px;
-                                top: 30px;
+                                position: relative;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: flex-start;
                             }
                         }
                         .blog-author {
