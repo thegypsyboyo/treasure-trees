@@ -128,7 +128,7 @@ const page = ({post}:Props) => {
         ): (
             <>
             <div className='flex items-center justify-center'>No content availabe for THE TEAM MEMBER</div>
-            <Link href="/team" className='flex items-center justify-center bg-[#339638] w-fit p-2 m-auto text-white rounded-2xl mt-5'>Go back</Link>
+            <Link href="/team" className='flex items-center justify-center bg-[#339638] w-fit p-2 m-auto text-white rounded-2xl'>Go back</Link>
             </>
         )}
     </div>
