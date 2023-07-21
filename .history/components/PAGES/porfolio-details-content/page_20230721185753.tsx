@@ -227,7 +227,7 @@ const PortfolioDetailsContent = ({portfolio,allPortfolio}: Props) => {
     ):(
         <>
         <div className="flex items-center justify-center mt-[20px]">OOPS NO CONTENT YET</div>
-        <Link href={"/portfolio"}  className="bg-[#339638] text-white cursor-pointer pointer flex items-center w-[60px] py-2 ml-auto mr-auto  justify-center mt-[10px] mb-[50px] uppercase">go back</Link>
+        <Link href={"/portfolio"}  className="bg-[#339638] text-white cursor-pointer pointer flex items-center w-[60px] ml-auto mr-auto  justify-center mt-[10px] mb-[50px] uppercase">go back</Link>
         </>
     )}
     </>
