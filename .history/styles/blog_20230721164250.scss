@@ -103,7 +103,6 @@ a , button{
                             left: 50px;
                             @media (max-width: 720px) {
                                 left: 0!important;
-                                font-size: 12px;
                             }
                         }
                         .blog-author {
@@ -158,9 +157,6 @@ a , button{
                             margin-bottom: 15px;
                             font-weight: 700;
                             color: var(--clr-common-heading);
-                            @media (max-width: 720px) {
-                                font-size: 18px;
-                            }
                         }
                         p.blog-description{
                             font-family: Roboto,sans-serif;
@@ -214,9 +210,6 @@ a , button{
                                     }
                                 }
                             }
-                        }
-                        @media (max-width: 720px) {
-                            padding: 58px 0px 48px;
                         }
                     }
                     @media (max-width: 720px) {
