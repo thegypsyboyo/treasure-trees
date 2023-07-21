@@ -80,7 +80,7 @@ const Porfolio = ({portfolio}:Props) => {
                       <div className='portfolio-thumb'>
                         {/* {item.singlePortfolioDatas ? ( */}
                           <Link href={`/portfolio/portfolio-details/${item.slug.current}`}>
-                            <img src={urlFor(item?.image).url()} alt="image" />
+                            <img src={urlFor(item.image).url()} alt="image" />
                           </Link>
                         {/* ): (
                          <span className="flex items-center justify-center">No image data found</span>
