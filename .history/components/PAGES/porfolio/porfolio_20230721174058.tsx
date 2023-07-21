@@ -83,7 +83,7 @@ const Porfolio = ({portfolio}:Props) => {
                             <img src={urlFor(item.image).url()} alt="image" />
                           </Link>
                         ): (
-                         <span className="flex items-center justify-center">No image data found</span>
+                         <div className="flex items-center justify-center">No image data found</div>
                         )}
                           <div className='portfolio-content'>
                             <a className='portfolio-hover-bg'/>

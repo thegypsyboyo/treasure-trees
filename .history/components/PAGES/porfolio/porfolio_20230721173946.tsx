@@ -83,7 +83,9 @@ const Porfolio = ({portfolio}:Props) => {
                             <img src={urlFor(item.image).url()} alt="image" />
                           </Link>
                         ): (
-                         <span className="flex items-center justify-center">No image data found</span>
+                          <Link href={`/portfolio/portfolio-details/${item.slug.current}`}>
+                            <img src={urlFor(item.image).url()} alt="image" />
+                        </Link>
                         )}
                           <div className='portfolio-content'>
                             <a className='portfolio-hover-bg'/>
