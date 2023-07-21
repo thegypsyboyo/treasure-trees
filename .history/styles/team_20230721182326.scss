@@ -777,11 +777,10 @@
     padding-top: 120px;
     padding-bottom: 60px;
     .container {
-        width: 90%;
+        // width: 80%;
         display: flex;
         margin-left: auto;
         margin-right: auto;
-        overflow: hidden;
         .team-details-wrapper {
             .row {
             width: 90%;
@@ -791,11 +790,14 @@
             margin-right: auto;
             .col-xl-5 {
                 width: 100%;
-                overflow: hidden;
                 .member-img {
                     margin-bottom: 0;
-                    width: 100%;
+                    max-width: 100%!important;
                     // max-width: 520px;
+                    @media (max-width: 720px) {
+                        max-width: fit-content;
+                        overflow: hidden!important;
+                    }
                     img {
                         border-radius: 10px;
                         width: 100%;
