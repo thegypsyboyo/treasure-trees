@@ -106,7 +106,6 @@ a , button{
                                 display: flex;
                                 align-items: flex-start;
                                 justify-content: flex-start;
-                                margin-left: 20px!important;
                             }
                         }
                         .blog-author {
@@ -155,8 +154,6 @@ a , button{
                                 display: flex;
                                 align-items: flex-start;
                                 justify-content: flex-start;
-                                margin-top: 15px;
-                                margin-left: 20px;
                             }
                         }
                         .blog-title {
@@ -227,7 +224,6 @@ a , button{
                     @media (max-width: 720px) {
                         border: 1px solid var(--clr-theme-1);
                         border-radius: 10px;
-                        padding: 0px 48px 48px;
                     }
                 }
 
