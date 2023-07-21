@@ -796,7 +796,7 @@
                     max-width: 100%!important;
                     // max-width: 520px;
                     @media (max-width: 720px) {
-                        max-width: fit-content;
+                        width: fit-content;
                         overflow: hidden!important;
                     }
                     img {
