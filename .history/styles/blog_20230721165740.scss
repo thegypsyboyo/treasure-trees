@@ -220,8 +220,13 @@ a , button{
                                 }
                             }
                         }
+                        @media (max-width: 720px) {
+                            padding: 58px 0px 48px;
+                        }
                     }
                     @media (max-width: 720px) {
+                        border: none!important;
+                        border-radius: 0;
                     }
                 }
 
