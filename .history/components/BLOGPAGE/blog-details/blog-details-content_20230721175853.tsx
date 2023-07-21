@@ -34,6 +34,16 @@ const BlogDetailsContent = ({post}: Props) => {
   const [nextPost, setNextPost] = useState<Post | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<Post[]>([]);
 
+  // useEffect(() => {
+  //   const fetchViews = async () => {
+  //     const res = await fetch(`/api/views/${post.slug.current}`);
+  //     const data = await res.json();
+  //     setViews(data.views);
+  //   };
+  //   fetchViews();
+  // }, [post.slug.current]);
+ 
+
   useEffect(() => {
     // const client = client;
 
