@@ -17,10 +17,6 @@ import urlFor from '@/lib/urlFor';
 SwiperCore.use([EffectFade, Navigation, Autoplay]);
 
 
-// type Props = {
-//   dataSlider:IntroSlider
-// }
-
 const pageIntro = () => {
 
   const [sliderData, setSLiderData] = useState<IntroSlider[] | null>(null)
@@ -88,7 +84,7 @@ const pageIntro = () => {
                             </p>
                           </div>
                           <div className="banner-btn">
-                            <div className="banner-meta-review">
+                            {/* <div className="banner-meta-review">
                               <div className="meta-review-thumb">
                                 <img src="/images/team/meta-review-thumb.png" alt="reviews" />
                               </div>
@@ -96,7 +92,7 @@ const pageIntro = () => {
                                 <span>{data.activeReviews}</span>
                                 Active reviews
                               </div>
-                            </div>
+                            </div> */}
                             <Link href="/contact" className='fill-btn-rounded'>
                               get in touch
                               <HiOutlineArrowNarrowRight/>
