@@ -7,7 +7,7 @@ import {FaTwitter, FaLinkedinIn, FaFacebookF} from "react-icons/fa"
 import {MdClose, MdLocationOn,MdKeyboardArrowLeft, MdKeyboardArrowDown} from "react-icons/md"
 import {GiAlarmClock} from "react-icons/gi"
 import {BsEnvelopeOpen, BsTelephone} from "react-icons/bs"
-import { BiDonateBlood } from "react-icons/bi";
+import { BiDonateBlood, BiPhone } from "react-icons/bi";
 import { groq } from "next-sanity";
 import { client } from "@/lib/sanity.client";
 import urlFor from "@/lib/urlFor";
@@ -51,6 +51,11 @@ const menuItems = [
       path: '/services',
     },
     {
+      id: 33,
+      label: 'Blog',
+      path: '/blog',
+    },
+    {
       id: 6,
       label: 'Pages',
       path: '#',
@@ -62,13 +67,13 @@ const menuItems = [
         },
         {
           id: 8,
-          label: 'Q&As',
-          path: '/a&qs'
+          label: 'FAQs',
+          path: '/FAQ'
         },
         {
           id: 9,
           label: 'Gallery',
-          path: '/porfolio'
+          path: '/portfolio'
         },
       ]
     },
@@ -84,6 +89,20 @@ const menuItems = [
     }
 ];
 
+const useClickOutside = (ref: React.RefObject<HTMLDivElement>, handler: () => void) => {
+    useEffect(() => {
+      const handleClickOutside = (event: MouseEvent) => {
+        if (ref.current && !ref.current.contains(event.target as Node)) {
+          handler();
+        }
+      };
+  
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }, [ref, handler]);
+};
 
 const Navbar = () => {
     const [isMetaHeaderSticky, setIsMetaHeaderSticky] = useState<boolean>(false);
@@ -98,27 +117,6 @@ const Navbar = () => {
     const handleToggleMenuClose = () =>  {
         setIsOpen(false)
     }
-    // code to handle click outside to close the menu
-    // const handleClick = (event: MouseEvent) => {
-    //     if (!menuRef.current?.contains(event.target as Node)) {
-    //       handleToggleMenuClose();
-    //     }
-    // };
-    // useEffect(() => {
-    //     document.addEventListener('mousedown', handleClick);
-      
-    //     return () => {
-    //       document.removeEventListener('mousedown', handleClick);
-    //     };
-    // }, []);
-    const handleClickOutside = (event: MouseEvent) => {
-        const target = event.target as HTMLElement;
-        if (!menuRef.current?.contains(target) && isOpen) {
-          handleToggleMenuClose();
-        }
-    };
-
-
    
     // function for dynamic rendering of the menu items
     const toggleMenu = (id: number) =>  {
@@ -162,7 +160,6 @@ const Navbar = () => {
           </li>
         );
     };
-
 
     useEffect(() => {
         function handleScroll() {
@@ -208,6 +205,8 @@ const Navbar = () => {
         }
         fetchNavSocials();
     }, []) 
+
+    useClickOutside(menuRef, handleToggleMenuClose);
   return (
     <React.Fragment>
        
@@ -271,9 +270,15 @@ const Navbar = () => {
                     <div className="meta-header-inner" key={index}>
                         <div className="meta-header-left">
                             <div className="header-logo">
+                                {item.logo ? (
                                 <Link href="/">
-                                    <img src={urlFor(item.logo).url()} alt="logo" />
+                                    <img src={urlFor(item?.logo).url()} alt="logo" />
                                 </Link>
+                                ): (
+                                    <Link href="/">
+                                    <img src="/images/logo/logo.svg"alt="logo" />
+                                </Link>
+                                )}
                             </div>
                         </div>
                         <div className="meta-header-right">
@@ -300,10 +305,10 @@ const Navbar = () => {
                                         </ul>
                                     </li>
                                     <li className="menu-item-has-children">
-                                        <Link href="">Pages</Link>
+                                        <Link href="/portfolio">Knowledge</Link>
                                         <ul className="sub-menu">
                                             <li><Link href="/portfolio">Portfolio</Link></li>
-                                            <li><Link href="/q&a">Q & A</Link></li>
+                                            <li><Link href="/FAQ">FAQ</Link></li>
                                           
                                          </ul>
                                     </li>
@@ -317,11 +322,13 @@ const Navbar = () => {
                             <div className="meta-items meta-header-meta-items d-none">
                                 <div className="meta-item d-none">
                                     <div className="meta-icon">
-                                        <GiAlarmClock/>
+                                        <BiPhone/>
                                     </div>
                                     <div className="meta-content">
-                                        <p>{item.openingDays}</p>
-                                        <div className="meta-title">{item.closingDays}</div>
+                                        <div className="meta-title">CONTACT INFORMATION</div>
+                                        <p>
+                                            <a href={`tel: ${item.emergencyContact}`}>{item.emergencyContact}</a>
+                                        </p>
                                     </div>
                                 </div>
                                 <div className="meta-item d-none">
@@ -329,8 +336,10 @@ const Navbar = () => {
                                         <BsEnvelopeOpen/>
                                     </div>
                                     <div className="meta-content">
-                                        <p>{item.emailAddress}</p>
                                         <div className="meta-title">Email Address</div>                
+                                        <p>
+                                            <a href={`mailto: ${item.emailAddress}`}>{item.emailAddress}</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -394,10 +403,10 @@ const Navbar = () => {
                                                     <Link href="/services">Our Work</Link>
                                                 </li>
                                                 <li className="menu-item-has-children">
-                                                    <Link  href="">Pages</Link>
+                                                    <Link  href="/portfolio">Knowledge</Link>
                                                     <ul className="sub-menu">
                                                         <li><Link href="/portfolio">Portfolio</Link></li>
-                                                        <li><Link href="/q&a">Q & A </Link></li>
+                                                        <li><Link href="/FAQ">FAQs</Link></li>
                                                     </ul>
                                                 </li>
                                                 <li><Link href="/blog">Blog</Link></li>
@@ -405,7 +414,7 @@ const Navbar = () => {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div className="header-search">
+                                    {/* <div className="header-search">
                                         <form action="#" className="action">
                                             <div className="single-input">
                                                 <input type="search" placeholder="Keyword here..." />
@@ -414,7 +423,7 @@ const Navbar = () => {
                                                 </button>
                                             </div>
                                         </form>
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <div className="header-main-right">
                                     <div className="meta-item">
@@ -422,7 +431,7 @@ const Navbar = () => {
                                             <BsTelephone/>
                                         </div>
                                         <div className="meta-item-content">
-                                            <div className="meta-title">What's up number</div>
+                                            <div className="meta-title">contact information</div>
                                             <p>
                                                 <a href={`tel: ${item.emergencyContact}`}>{item.emergencyContact}</a>
                                             </p>
@@ -443,16 +452,23 @@ const Navbar = () => {
         </header>
 
         {navSocials? (
-        <div className={`${isOpen ? "fix" : "hidden" }`}>
+        <div className={`${isOpen ? "fix" : "hidden" }`} ref={menuRef}>
         {navSocials?.map((item, index) => (
             <div className="side-info info-open" key={index}>
                 <div className="side-info-content">
                     <div className="offset-widget mb-[40px]">
                         <div className="row items-center">
                             <div className="col-9">
+                                {item.logo ? (
                                 <Link href="/">
                                     <img src={urlFor(item.logo).url()} alt="logo" />
                                 </Link>
+
+                                ):(
+                                <Link href="/">
+                                    <img src="/images/logo/logo.svg" alt="logo" />
+                                </Link>
+                                )}
                             </div>
                             <div className="col-3">
                                 <button className="side-info-close" onClick={handleToggleMenuClose}>
@@ -466,12 +482,6 @@ const Navbar = () => {
                             {menuItems.map((item) => renderMenuItem((item)))}
                         </ul>
                     </nav>
-                    <div className="offset-search mb-[30px]">
-                        <form action="#" className="filter-search-input">
-                            <input type="text" placeholder="Search keyword" />
-                            <button type="submit"><FaSearch/></button>
-                        </form>
-                    </div>
                     <div className="offset-support mb-[30px]">
                         <div className="footer-support">
                             <div className="item-support-meta">

@@ -89,6 +89,20 @@ const menuItems = [
     }
 ];
 
+const useClickOutside = (ref: React.RefObject<HTMLDivElement>, handler: () => void) => {
+    useEffect(() => {
+      const handleClickOutside = (event: MouseEvent) => {
+        if (ref.current && !ref.current.contains(event.target as Node)) {
+          handler();
+        }
+      };
+  
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }, [ref, handler]);
+};
 
 const Navbar = () => {
     const [isMetaHeaderSticky, setIsMetaHeaderSticky] = useState<boolean>(false);
@@ -103,27 +117,6 @@ const Navbar = () => {
     const handleToggleMenuClose = () =>  {
         setIsOpen(false)
     }
-    // code to handle click outside to close the menu
-    // const handleClick = (event: MouseEvent) => {
-    //     if (!menuRef.current?.contains(event.target as Node)) {
-    //       handleToggleMenuClose();
-    //     }
-    // };
-    // useEffect(() => {
-    //     document.addEventListener('mousedown', handleClick);
-      
-    //     return () => {
-    //       document.removeEventListener('mousedown', handleClick);
-    //     };
-    // }, []);
-    const handleClickOutside = (event: MouseEvent) => {
-        const target = event.target as HTMLElement;
-        if (!menuRef.current?.contains(target) && isOpen) {
-          handleToggleMenuClose();
-        }
-    };
-
-
    
     // function for dynamic rendering of the menu items
     const toggleMenu = (id: number) =>  {
@@ -167,7 +160,6 @@ const Navbar = () => {
           </li>
         );
     };
-
 
     useEffect(() => {
         function handleScroll() {
@@ -213,6 +205,8 @@ const Navbar = () => {
         }
         fetchNavSocials();
     }, []) 
+
+    useClickOutside(menuRef, handleToggleMenuClose);
   return (
     <React.Fragment>
        
@@ -458,7 +452,7 @@ const Navbar = () => {
         </header>
 
         {navSocials? (
-        <div className={`${isOpen ? "fix" : "hidden" }`}>
+        <div className={`${isOpen ? "fix" : "hidden" }`} ref={menuRef}>
         {navSocials?.map((item, index) => (
             <div className="side-info info-open" key={index}>
                 <div className="side-info-content">
