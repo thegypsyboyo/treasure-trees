@@ -47,8 +47,9 @@ export default function RootLayout({
         <Head>
         <title>Treasure Trees | Investment Growth & Agribusiness</title>
         <meta name="description" content="Investment Growth & Agribusiness." />
-        <meta name="description" content="'An Eco-restoration website for rebuilding and restoration." />
+        <meta name="keywords" content="treasuretrees, next.js, react, seo, environment" />
         <meta name="author" content="Lewis Onyango" />
+        <meta name="author" content="LewisMeta" />
         </Head>
         <Navbar/>
         {children}

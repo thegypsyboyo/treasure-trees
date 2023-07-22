@@ -9,11 +9,11 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import Footer from '../../components/HOME/Footer/footer';
 import Navbar from '../../components/HOME/navbar/navbar';
 import { useEffect } from 'react';
-import Head from "next/head"
-// export const metadata = {
-//   title: 'Treasure Trees | Investment Growth & Agribusiness',
-//   description: 'An Eco-restoration website for rebuilding and restoration',
-// }
+
+export const metadata = {
+  title: 'Treasure Trees || Investment Growth & Agribusiness',
+  description: 'An Eco-restoration website for rebuilding and restoration',
+}
 
 
 
@@ -44,12 +44,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body >
-        <Head>
-        <title>Treasure Trees | Investment Growth & Agribusiness</title>
-        <meta name="description" content="Investment Growth & Agribusiness." />
-        <meta name="description" content="'An Eco-restoration website for rebuilding and restoration." />
-        <meta name="author" content="Lewis Onyango" />
-        </Head>
         <Navbar/>
         {children}
         <Footer/>
