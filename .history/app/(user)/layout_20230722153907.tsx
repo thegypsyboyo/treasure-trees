@@ -38,9 +38,9 @@ export default function RootLayout({
   }, []);
   // Define the page transition animation
   const pageTransition = {
-    initial: { opacity: 0, y: '-100vh'},
-    animate: { opacity: 1 , y:0},
-    exit: { opacity: 0, y:'100vh' },
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
   };
   return (
     <html lang="en">
@@ -58,7 +58,7 @@ export default function RootLayout({
             animate="animate"
             exit="exit"
             variants={pageTransition}
-            transition={{ duration: 1, ease: 'easeInOut' }}
+            transition={{ duration: 2 }}
             style={{position: "relative", overflow:"hidden", minHeight: "100vh"}}
           >
 
