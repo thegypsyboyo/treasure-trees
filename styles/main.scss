@@ -5,13 +5,22 @@
 @import './partials/variables.scss';
 
 
-input,a,button {
+input,a,button, span, p {
   border: none;
   background: none;
   outline: none;
-  // border-radius: 0;
-  text-decoration: none;
+  background-color: transparent;
+  text-decoration: none; 
+  color: inherit; 
  
+}
+
+
+a:focus {
+  outline: none;
+}
+input:focus,a:focus,button:focus,span:focus,p:focus {
+  outline: none;
 }
 
 body {
